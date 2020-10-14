@@ -27,6 +27,16 @@ def greetings_all():
     return jsonify(greetings)
 
 
+@app.route('/api/greetings/lang/<language>/')
+def greeting_language(language):
+    data = []
+
+    for greeting in greetings:
+        if greeting['language'] == language.lower():
+            data.append(greeting)
+    return jsonify(data)
+
+
 @app.route('/api/greetings/<int:id>/')
 def greeting_id(id):
     try:
