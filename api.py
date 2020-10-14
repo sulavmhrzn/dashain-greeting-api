@@ -30,11 +30,22 @@ def greetings_all():
 @app.route('/api/greetings/lang/<language>/')
 def greeting_language(language):
     data = []
-
     for greeting in greetings:
         if greeting['language'] == language.lower():
             data.append(greeting)
     return jsonify(data)
+
+
+@app.route('/api/greetings/lang/<language>/random/')
+def greeting_language_random(language):
+    data = []
+    for greeting in greetings:
+        if greeting['language'] == language.lower():
+            data.append(greeting)
+    try:
+        return jsonify(random.choice(data))
+    except IndexError:
+        return jsonify({"Error": {"Code": 404, "Message": "Greeting with the given language was not found."}}), 404
 
 
 @app.route('/api/greetings/<int:id>/')
