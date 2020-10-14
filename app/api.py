@@ -81,7 +81,3 @@ def ratelimit_handler(e):
 @limiter.request_filter
 def ip_whitelist():
     return request.remote_addr == '127.0.0.1'
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
