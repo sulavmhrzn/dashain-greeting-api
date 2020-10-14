@@ -14,14 +14,14 @@ Dashain Greetings Api provides list of greetings for *Dashain Festival*
 1. Nepali:
     [https://dashain.herokuapp.com/api/greetings/lang/nepali](https://dashain.herokuapp.com/api/greetings/lang/nepali)
 2. English:
-    [https://dashain.herokuapp.com/api/greetings/lang/nepali](https://dashain.herokuapp.com/api/greetings/lang/nepali)
+    [https://dashain.herokuapp.com/api/greetings/lang/english](https://dashain.herokuapp.com/api/greetings/lang/english)
 
 ## Random greetings
 [https://dashain.herokuapp.com/api/greetings/random](https://dashain.herokuapp.com/api/greetings/random)
 
 ## Language specific random greetings
 1. [https://dashain.herokuapp.com/api/greetings/lang/nepali/random](https://dashain.herokuapp.com/api/greetings/lang/nepali/random)
-2. [https://dashain.herokuapp.com/api/greetings/lang/english](https://dashain.herokuapp.com/api/greetings/lang/english)
+2. [https://dashain.herokuapp.com/api/greetings/lang/english/random](https://dashain.herokuapp.com/api/greetings/lang/english/random)
 
 ## How these greetings were collected
 The majority of greetings were contributed!
