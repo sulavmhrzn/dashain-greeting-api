@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, make_response, request
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
+from flask import render_template
 
 import json
 import random
@@ -19,7 +20,8 @@ with open('greetings/index.json', 'r') as file:
 
 @app.route('/')
 def index():
-    return "Try: /api/greetings/ , /api/greetings/id/ , /api/greetings/random"
+    return render_template("index.html")
+    #return "Try: /api/greetings/ , /api/greetings/id/ , /api/greetings/random"
 
 
 @app.route('/api/greetings/')
@@ -62,6 +64,9 @@ def greeting_random():
     greeting = random.choice(greetings)
     return jsonify(greeting)
 
+@app.route('/local')
+def local_api_info():
+    return "Try: /api/greetings/ , /api/greetings/id/ , /api/greetings/random"
 
 # test
 @app.route('/ping')
